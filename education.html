@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan's Website</title>
+    <link rel="shortcut icon" type="image/png" href="r.jpg"> <!-- Add your own image for the icon -->
+
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: Avenir, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF0F5; /* Light background color */
+            color: #0f0f0f; /* Dark text color for readability */
+            position: sticky;
+            opacity: 0;
+            animation: fadeIn 1s forwards 0.3s; /* Fade-in effect for the entire body */
+        }
+
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Navbar Styles */
+        header {
+            background-color: #FFDAB9; /* Dark background for header */
+            color: #fff; /* White text for contrast */
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: background-color 0.3s ease;
+        }
+
+        header .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #f39c12; /* Yellow on hover for links */
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            background-color: #DEB887;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            opacity: 0;
+            animation: fadeInUp 1.5s forwards 0.6s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-btn {
+            padding: 12px 30px;
+            background-color: #0d0d0d;
+            color: #fff;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #0c0c0c;
+            transform: scale(1.1); /* Slight zoom effect on button hover */
+        }
+
+        /* About Section Styles */
+        .about {
+            background-color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeInUp 1.5s forwards 1s;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        /* Education Section Styles */
+        .education {
+            background-color: #FFEFD5;
+            padding: 60px 20px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeInUp 1.5s forwards 1.5s;
+        }
+
+        .education h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .education p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        /* Gallery Section Styles */
+        .Gallery {
+            background-color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeInUp 1.5s forwards 2s;
+        }
+
+        .Gallery h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .Gallery p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        /* Contact Section Styles */
+        .contact {
+            background-color: #E9967A;
+            padding: 60px 20px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeInUp 1.5s forwards 2.5s;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        footer {
+            background-color:#FFDAB9;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Education Card Styles */
+        .education-card {
+            background-color: #FAFAD2;
+            border: 2px solid #FFD700;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .education-card:hover {
+            transform: scale(1.05); /* Slight zoom effect on card hover */
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        }
+
+        .education-card h3 {
+            font-size: 1.5rem;
+            color: #663399;
+        }
+
+        .education-card p {
+            font-size: 1rem;
+            color: #0a0a0a;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .cta-btn {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+
+            .about h2, .contact h2, .education h2, .Gallery h2 {
+                font-size: 2rem;
+            }
+
+            .education-card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+        <!-- Navbar -->
+   <header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li> 
+            <li><a href="about.html">Biodata</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div style="background: linear-gradient(to right, #FFB6C1, #FFDAB9); border-radius: 15px; padding: 40px; margin: 20px; max-width: 900px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); margin-left: auto; margin-right: auto;">
+            <h2 style="font-size: 2.8rem; color: #09090a; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">The Educational Journey</h2>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+                <!-- Education Card 1 -->
+                <div class="education-card">
+                    <h3>Primary School</h3>
+                    <p>Graduated at SK Bandar,Limbang.</p>
+                </div>
+
+                <!-- Education Card 2 -->
+                <div class="education-card">
+                    <h3>Secondary School</h3>
+                    <p>Finished his education at SMK LIMBANG.</p>
+                </div>
+
+                <!-- Education Card 3 -->
+                <div class="education-card">
+                    <h3>University</h3>
+                    <p>Currently pursuing a diploma in Information Management at [Universiti Teknologi Mara, Cawangan Sarawak].</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; This Website Develop For IMD318.</p>
+    </footer>
+
+</body>
+</html>
+

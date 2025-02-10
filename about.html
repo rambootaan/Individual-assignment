@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan's Biodata</title>
+    <link rel="shortcut icon" type="image/png" href="r.jpg">
+
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: Avenir, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1E90FF;
+            color: #f8f7f7;
+        }
+
+        /* Navbar Styles */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: #87CEEB;
+            color: #f9f8f8;
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #f39c12;
+        }
+
+        /* Biodata Section Styles */
+        .biodata {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 20px;
+            background-color: #4169E1;
+            border: 2px solid #f5f4f4;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 50px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .biodata:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .biodata h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .biodata img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #333;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .biodata p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .modal:target {
+            display: flex;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: white;
+            font-size: 2rem;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #87CEEB;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">Biodata</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Biodata Section -->
+    <section class="biodata" id="biodata">
+        <h1>Ryan's Biodata</h1>
+        <a href="#image-modal">
+            <img src="ayen.jpeg" alt="Yen">
+        </a>
+        <p><strong>Name:</strong>Ryan Adem Billy</p>
+        <p><strong>Age:</strong>21 years old</p>
+        <p><strong>Date of Birth:</strong> 10 April 2004</p>
+        <p><strong>Hometown:</strong> Batu Biah, Limbang, Sarawak</p>
+        <p><strong>Race:</strong> Lun Bawang</p>
+        <p><strong>Hobbies:</strong> Futsal, Badminton & Football</p>
+        <p><strong>Fav Song:</strong> Feel it Still By Portugal.The Man</p>
+
+        </div>
+    </section>
+
+    
+
+    <!DOCTYPE html> 
+<html> 
+<body>
+    <center>
+        
+        <audio controls><source src="Feel it still.mp3" type="audio/mpeg">
+        
+        </audio>
+    </center>
+    
+    <br>
+</body> 
+</html>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; This Website Develop For IMD318.</p>
+    </footer>
+</body>
+</html>
